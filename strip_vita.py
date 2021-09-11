@@ -81,7 +81,7 @@ def TFIDF(num_text, text_list, vocab):
 
 
 def calculate_entropy(output_probs):
-    entropy = np.array(torch.sum(- output_probs * torch.log2(output_probs), dim=1).cpu())
+    entropy = np.array(torch.sum(- output_probs * torch.log(output_probs), dim=1).cpu())
     return entropy
 
 
