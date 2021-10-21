@@ -36,7 +36,7 @@ Before implementing RAP, you should create backdoored models by using existing a
 #### Implementing RAP
 We provide a script **run_rap.sh** which contains main commands for RAP defense and evaluation.
 
-In the ***constructing*** stage, you may run (suppose ``cf'' is the chosen RAP trigger word):
+In the ***constructing*** stage, you may run (suppose ''cf'' is the chosen RAP trigger word):
 ```pythonscript
 python3 rap_defense.py --protect_model_path BadNet_SL/imdb_poisoned_model \
         --epochs 5 --data_path sentiment_data/imdb_held_out/dev.tsv \
@@ -55,7 +55,7 @@ python3 evaluate_rap_performance.py --model_path BadNet_SL_RAP/imdb_SL_cf_defens
 ```
 
 ### Other Online Defense Methods
-We choose [ONION](https://arxiv.org/pdf/2011.10369.pdf) and [STRIP](https://arxiv.org/pdf/1911.10312.pdf) as our baselines. Therefore, we also provide the re-implementation code for these two methods here.
+We choose [ONION](https://arxiv.org/pdf/2011.10369.pdf) and [STRIP](https://arxiv.org/pdf/1911.10312.pdf) as our baselines. Therefore, we also provide the re-implementated code for these two methods here.
 
 #### ONION
 The code is in the file **onion.py**. An example to run this file is:
