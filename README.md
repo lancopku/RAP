@@ -6,7 +6,7 @@ Code for the paper *RAP: Robustness-Aware Perturbations for Defending against Ba
 ## Introduction
 In this paper, we propose a novel and efficient online defense method against textual backdoor attacks. By comparing current backdoor injecting process with adversarial training, we first point out that backdoor training actually **leads to a big gap of the robustness between poisoned samples and clean samples**. Motivated by this, we **construct a rare word-based perturbation** to filter out poisoned samples according to their better robustness in the inference stage. Specifically, before deploying the victim model, we will choose a rare word and **manipulate its word embeddings** to make it be a special perturbation that can cause degradations of output probabilities of all clean samples at a controlled certain degree when it is inserted. The full defending procedure is illustrated in the following figure:
 
-![defense procedure](figures/defense.pdf)
+![defense procedure](figures/defense.jpg)
 
 ## Usage
 
