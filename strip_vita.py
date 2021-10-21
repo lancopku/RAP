@@ -153,9 +153,11 @@ if __name__ == '__main__':
     parser.add_argument('--triggers', type=str, help='backdoor triggers')
     parser.add_argument('--protect_label', type=int, help='protect label')
     parser.add_argument('--replace_ratio', type=float, default=0.7,  help='replace ratio')
-    parser.add_argument('--perturbation_number', type=int, default=20, help='num of perturbations')
-    parser.add_argument('--num_of_held_out_samples', type=int, default=None, help='num of samples')
-    parser.add_argument('--num_of_opposite_samples', type=int, default=None, help='num of samples')
+    parser.add_argument('--perturbation_number', type=int, default=20, help='num of perturbed copies')
+    parser.add_argument('--num_of_held_out_samples', type=int, default=None, help='num of clean valid samples whose '
+                                                                                  'labels are the protect label')
+    parser.add_argument('--num_of_opposite_samples', type=int, default=None, help='num of clean valid samples whose'
+                                                                                  'labels are not the protect label')
     parser.add_argument('--num_of_test_samples', type=int, default=None, help='num of testing samples')
     args = parser.parse_args()
 
